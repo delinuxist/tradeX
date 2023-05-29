@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* modify a base style  */
+  h1 {
+    @apply text-3xl;
+  }
+
+  form {
+    @apply w-full;
+  }
+
+  input {
+    @apply w-full h-[44px] bg-white border border-gray-300 rounded-md px-3 placeholder:text-gray-500;
+  }
+
+  select {
+    @apply w-full h-[44px]  border border-gray-300 rounded-md px-3 placeholder:text-gray-500 bg-slate-200;
+  }
+}
+
+@layer components {
+  /* add your own extracted components */
+}
+
+@layer utilities {
+  /* simple utility-based classes */
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

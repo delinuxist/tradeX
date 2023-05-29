@@ -1,0 +1,39 @@
+<div class="{{ opened }}">
+  <div class="flex items-center justify-between p-5">
+    <h1 [hidden]="!openNav" class="font-bold">TradeX</h1>
+    <div class="p-2 duration-200 ease-in-out" (click)="toggleSideNav()">
+      <mat-icon *ngIf="openNav">zoom_in_map</mat-icon>
+      <mat-icon *ngIf="!openNav">zoom_out_map</mat-icon>
+    </div>
+  </div>
+  <div class="mt-20"></div>
+  <div class="p-5 space-y-4">
+    <a
+      href="/dashboard"
+      class="flex items-center p-1 rounded-md hover:bg-white hover:text-tradeX-blueBlack-500"
+    >
+      <mat-icon>dashboard</mat-icon>
+      <h1
+        [hidden]="!openNav"
+        class="ml-4 text-2xl"
+        [ngClass]="{ 'scale-0 truncate': !openNav }"
+      >
+        Dashboard
+      </h1>
+    </a>
+    <a
+      href="/portfolio"
+      class="flex flex-wrap items-center p-1 rounded-md hover:bg-white hover:text-tradeX-blueBlack-500"
+    >
+      <mat-icon>folder_open</mat-icon>
+      <h1 [hidden]="!openNav" class="ml-4 text-2xl">Portfolio</h1>
+    </a>
+    <a
+      href="/trade-history"
+      class="flex items-center p-1 rounded-md hover:bg-white hover:text-tradeX-blueBlack-500"
+    >
+      <mat-icon>history</mat-icon>
+      <h1 [hidden]="!openNav" class="ml-4 text-2xl">Trade History</h1>
+    </a>
+  </div>
+</div>
