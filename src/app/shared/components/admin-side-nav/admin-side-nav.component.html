@@ -1,40 +1,61 @@
 <div class="{{ opened }}">
   <div class="flex items-center justify-between p-5">
-    <h1 [hidden]="!openNav" class="font-bold">TradeX</h1>
-    <div class="p-2 duration-200 ease-in-out" (click)="toggleSideNav()">
+    <h1
+      [hidden]="!openNav"
+      class="font-bold text-transparent bg-gradient-to-tr from-tradeX-blueBlack-500 to-cyan-500 bg-clip-text"
+    >
+      TradeX
+    </h1>
+    <div
+      class="p-2 duration-200 ease-in-out text-cyan-700"
+      (click)="toggleSideNav()"
+    >
       <mat-icon *ngIf="openNav">zoom_in_map</mat-icon>
       <mat-icon *ngIf="!openNav">zoom_out_map</mat-icon>
     </div>
   </div>
   <div class="mt-20"></div>
-  <div class="flex flex-col justify-between h-[78vh]">
+  <div class="flex flex-col justify-between h-[80vh]">
     <div class="p-5 space-y-4">
       <a
-        routerLink="/client/dashboard"
+        routerLink="/admin/trades"
         class="flex items-center p-1 rounded-md cursor-pointer hover:bg-white hover:text-tradeX-blueBlack-500"
       >
-        <mat-icon>dashboard</mat-icon>
+        <mat-icon>timeline</mat-icon>
         <h1
           [hidden]="!openNav"
           class="ml-4 text-2xl"
           [ngClass]="{ 'scale-0 truncate': !openNav }"
         >
-          Dashboard
+          Trades
         </h1>
       </a>
       <a
-        routerLink="/client/portfolio"
+        routerLink="/admin/customers"
         class="flex flex-wrap items-center p-1 rounded-md cursor-pointer hover:bg-white hover:text-tradeX-blueBlack-500"
       >
-        <mat-icon>folder_open</mat-icon>
-        <h1 [hidden]="!openNav" class="ml-4 text-2xl">Portfolio</h1>
+        <mat-icon>family_restroom</mat-icon>
+        <h1 [hidden]="!openNav" class="ml-4 text-2xl">Customers</h1>
       </a>
       <a
-        routerLink="/client/trade-history"
+        routerLink="/admin/logs"
         class="flex items-center p-1 rounded-md cursor-pointer hover:bg-white hover:text-tradeX-blueBlack-500"
       >
-        <mat-icon>history</mat-icon>
-        <h1 [hidden]="!openNav" class="ml-4 text-2xl">History</h1>
+        <mat-icon>query_stats</mat-icon>
+        <h1
+          [hidden]="!openNav"
+          class="ml-4 text-2xl"
+          [ngClass]="{ 'scale-0 truncate': !openNav }"
+        >
+          Logs
+        </h1>
+      </a>
+      <a
+        routerLink="/admin/exchanges"
+        class="flex items-center p-1 rounded-md cursor-pointer hover:bg-white hover:text-tradeX-blueBlack-500"
+      >
+        <mat-icon>currency_exchange</mat-icon>
+        <h1 [hidden]="!openNav" class="ml-4 text-2xl">Exchanges</h1>
       </a>
     </div>
     <div class="p-5">

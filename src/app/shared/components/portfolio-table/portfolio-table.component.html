@@ -1,0 +1,42 @@
+<table class="w-full">
+  <thead class="text-left capitalize border-b border-slate-800">
+    <tr>
+      <th>Name</th>
+      <th>Total Cash</th>
+      <th class="text-center">Actions</th>
+    </tr>
+  </thead>
+
+  <tr
+    class="h-10 border-b border-gray-600 cursor-pointer hover:bg-white"
+    *ngFor="let portfolio of portfolios"
+  >
+    <td class="py-4 pl-2">{{ portfolio.name }}</td>
+    <td class="py-4 pl-2">cash</td>
+    <td class="py-4 pl-2">
+      <!-- actions -->
+      <div class="flex items-center justify-center gap-8">
+        <span class="duration-150 text-cyan-500 hover:scale-110">
+          <mat-icon>monitoring</mat-icon>
+        </span>
+        <span
+          class="text-green-700 duration-150 hover:scale-110"
+          (click)="openUpdate(portfolio.portfolioId)"
+        >
+          <mat-icon>edit_square</mat-icon>
+        </span>
+        <span class="text-red-700 duration-150 hover:scale-110">
+          <mat-icon>delete</mat-icon>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>
+<div
+  *ngIf="portfolios.length < 1"
+  class="flex items-center justify-center mt-8"
+>
+  <h1 class="font-bold">
+    No Portfolios... Create a portfolio to start trading
+  </h1>
+</div>

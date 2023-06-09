@@ -1,0 +1,27 @@
+<div
+  class="relative w-full px-2 py-3 space-x-3 overflow-x-scroll scrollbar-hide whitespace-nowrap scroll-smooth"
+>
+  <div
+    class="w-[15rem] h-[7.5rem] rounded-md shadow-tradeX-box-shadow bg-white inline-block"
+    *ngFor="let stock of stocks"
+  >
+    <div class="flex items-center justify-between px-2">
+      <div class="flex flex-col gap-1 py-2">
+        <img
+          src="{{ ticker[stock.TICKER].image }}"
+          alt="img"
+          class="w-[5rem] h-[5rem]"
+        />
+        <div>
+          <p class="text-center">{{ stock.TICKER }}</p>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <span>{{ stock.BID_PRICE.toFixed(3) }}: BP</span>
+        <span>{{ stock.ASK_PRICE.toFixed(3) }}: AP</span>
+        <span>{{ stock.MAX_PRICE_SHIFT.toFixed(3) }}: MPS</span>
+        <span>{{ stock.LAST_TRADED_PRICE.toFixed(3) }}: LTP</span>
+      </div>
+    </div>
+  </div>
+</div>
