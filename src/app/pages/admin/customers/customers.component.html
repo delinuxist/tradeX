@@ -1,0 +1,38 @@
+<div>
+  <admin-top-nav [page]="page"></admin-top-nav>
+  <div class="p-5">
+    <div class="mt-5"></div>
+    <div class="flex gap-8">
+      <div
+        routerLink="/admin/customers/users"
+        class="h-[6rem] w-[13rem] p-2 rounded-md bg-white flex justify-between items-center cursor-pointer border border-gray-300 shadow-tradeX-box-shadow hover:scale-105 duration-150 ease-in-out"
+      >
+        <img
+          src="../../../../assets/icons/customer.png"
+          alt="userss"
+          class="w-[5rem] h-[5rem]"
+        />
+        <div class="font-bold">
+          <p>Clients</p>
+          <p>{{ allClients.length }}</p>
+        </div>
+      </div>
+      <div
+        routerLink="/admin/customers/admins"
+        class="h-[6rem] w-[13rem] p-2 rounded-md bg-white flex justify-between items-center cursor-pointer border border-gray-300 shadow-tradeX-box-shadow hover:scale-105 duration-150 ease-in-out"
+      >
+        <img
+          src="../../../../assets/icons/admin-with-cogwheels.png"
+          alt="userss"
+          class="w-[5rem] h-[5rem]"
+        />
+        <div class="font-bold">
+          <p>Admins</p>
+          <p>{{ allAdmins.length }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8"></div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
