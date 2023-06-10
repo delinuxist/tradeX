@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { orderRequest } from '../../shared/interfaces/order.model';
+import { orderRequest } from '../../../shared/interfaces/order.model';
 
 @Injectable({
   providedIn: 'root',
