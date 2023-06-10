@@ -1,0 +1,32 @@
+<div>
+  <app-top-nav [page]="page"></app-top-nav>
+  <div class="p-5">
+    <div class="relative">
+      <p class="absolute font-bold transform -translate-y-1/2 left-7 top-1/2">
+        Search Portfolio
+      </p>
+      <input
+        class="pl-40"
+        type="text"
+        ngModel
+        name="name"
+        placeholder="Search Portfolio..."
+      />
+      <div
+        (click)="openDialog()"
+        class="absolute right-0 p-[0.59rem] text-white transform -translate-y-1/2 rounded-md top-1/2 bg-gradient-to-tr from-tradeX-blueBlack-500 to-cyan-600 items-center flex hover:scale-105 duration-200 cursor-pointer hover:bg-gradient-to-br ease-in-out"
+      >
+        <mat-icon>add</mat-icon>
+        Create Portfolio
+      </div>
+    </div>
+    <!-- <div class="mt-6"></div>
+    <div class="w-full bg-white shadow-tradeX-box-shadow rounded-md h-[10rem]">
+      <div class="w-[18rem] h-[18rem]">
+        <apx-chart [series]="series" [chart]="chartDetails"></apx-chart>
+      </div>
+    </div> -->
+    <div class="mt-6"></div>
+    <app-portfolio-table [portfolios]="portfolios"></app-portfolio-table>
+  </div>
+</div>
