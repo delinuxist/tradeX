@@ -3,7 +3,7 @@ export interface portfolioRequest {
 }
 
 export interface portfolioResponse {
-  portfolioId: number;
+  portfolioId: string;
   name: string;
-  clientId: number;
+  clientId: string;
 }
