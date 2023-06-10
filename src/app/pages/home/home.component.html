@@ -1,0 +1,30 @@
+<section class="h-[100vh] w-[100vw] relative">
+  <img src="../assets/img/bg.jpeg" class="w-full h-full" alt="" />
+  <div class="absolute top-0 left-0 w-full h-full bg-black/70"></div>
+  <div
+    class="absolute right-0 z-10 text-white transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+  >
+    <h1 class="text-6xl font-bold text-center animate-bounce">
+      Welcome To
+      <span
+        class="text-transparent bg-gradient-to-tr bg-clip-text from-gray-400 to-cyan-300"
+        >TradeX</span
+      >
+    </h1>
+    <div class="mt-20"></div>
+    <div class="flex items-center justify-center gap-16">
+      <div
+        routerLink="/auth/login"
+        class="px-24 py-3 text-3xl duration-200 border rounded-md cursor-pointer hover:scale-105 hover:border-none hover:bg-gradient-to-tr from-tradeX-blueBlack-500 hover:text-white to-cyan-300 text-cyan-500"
+      >
+        Login
+      </div>
+      <div
+        routerLink="/auth/register"
+        class="px-20 py-3 text-3xl duration-200 border rounded-md cursor-pointer hover:scale-105 hover:border-none hover:bg-gradient-to-tr from-tradeX-blueBlack-500 hover:text-white to-cyan-300 text-cyan-500"
+      >
+        Register
+      </div>
+    </div>
+  </div>
+</section>

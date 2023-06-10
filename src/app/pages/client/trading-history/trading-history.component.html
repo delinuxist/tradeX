@@ -1,0 +1,31 @@
+<div>
+  <app-top-nav [page]="page"></app-top-nav>
+  <div class="p-5">
+    <div class="flex items-center gap-4">
+      <div class="relative w-[70%]">
+        <p class="absolute font-bold transform -translate-y-1/2 left-7 top-1/2">
+          Search Order
+        </p>
+        <input
+          class="pl-40 w-[100%]"
+          type="text"
+          ngModel
+          name="name"
+          placeholder="Search Order..."
+        />
+      </div>
+      <div class="w-[15%]">
+        <select name="stocks" class="bg-white">
+          <option value="">Filter By Stock</option>
+        </select>
+      </div>
+      <div class="w-[15%]">
+        <select name="stocks" class="bg-white">
+          <option value="">Filter By Price</option>
+        </select>
+      </div>
+    </div>
+    <div class="mt-6"></div>
+    <order-table></order-table>
+  </div>
+</div>
